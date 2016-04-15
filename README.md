@@ -3,4 +3,4 @@
 
 # 效果图
 
-![image]()
+![image](https://github.com/dalong982242260/SlidingBall/blob/master/img/dalong.gif?raw=true)
