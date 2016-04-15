@@ -3,12 +3,9 @@
     android:shape="rectangle"
     android:useLevel="false">
 
-    <solid android:color="@color/color_item_bg" />
+    <solid android:color="@color/color_view_btn" />
     <stroke
-        android:width="0.00dip"
+        android:width="0dip"
         android:color="@color/colorPrimary" />
-    <size
-        android:width="@dimen/width"
-        android:height="@dimen/width" />
     <corners android:radius="5dp"/>
 </shape>

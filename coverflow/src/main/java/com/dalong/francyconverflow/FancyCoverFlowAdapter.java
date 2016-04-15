@@ -15,7 +15,7 @@
  *    limitations under the License.
  */
 
-package com.dalong.slidingball.coverflow;
+package com.dalong.francyconverflow;
 
 import android.view.View;
 import android.view.ViewGroup;

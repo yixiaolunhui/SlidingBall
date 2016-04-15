@@ -15,7 +15,7 @@
  *    limitations under the License.
  */
 
-package com.dalong.slidingball.coverflow;
+package com.dalong.francyconverflow;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -28,14 +28,10 @@ import android.view.animation.Transformation;
 import android.widget.Gallery;
 import android.widget.SpinnerAdapter;
 
-import com.dalong.slidingball.R;
 
 
 public class FancyCoverFlow extends Gallery {
 
-    // =============================================================================
-    // Constants
-    // =============================================================================
 
     public static final int ACTION_DISTANCE_AUTO = Integer.MAX_VALUE;
 

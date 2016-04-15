@@ -5,10 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.dalong.slidingball.coverflow.FancyCoverFlow;
-import com.dalong.slidingball.coverflow.FancyCoverFlowAdapter;
+
+import com.dalong.francyconverflow.FancyCoverFlow;
+import com.dalong.francyconverflow.FancyCoverFlowAdapter;
 
 import java.util.List;
 
@@ -33,13 +36,19 @@ public class MyFancyCoverFlowAdapter extends FancyCoverFlowAdapter {
             convertView.setLayoutParams(new FancyCoverFlow.LayoutParams(width / 3, FancyCoverFlow.LayoutParams.WRAP_CONTENT));
             holder = new ViewHolder();
             holder.product_name = (TextView) convertView.findViewById(R.id.name);
+            holder.product_btn = (Button) convertView.findViewById(R.id.item_btn);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        Item item = getItem(position);
+        final Item item = getItem(position);
         holder.product_name.setText(item.getName());
-
+        holder.product_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, item.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
         return convertView;
     }
 
@@ -76,5 +85,6 @@ public class MyFancyCoverFlowAdapter extends FancyCoverFlowAdapter {
 
     static class ViewHolder {
         TextView product_name;
+        Button product_btn;
     }
 }
